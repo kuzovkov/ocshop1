@@ -9,7 +9,7 @@ define('HTTPS_SERVER', 'http://localhost:8008/');
 define('DIR_APPLICATION', '/var/www/html/catalog/');
 define('DIR_SYSTEM', '/var/www/html/system/');
 define('DIR_IMAGE', '/var/www/html/image/');
-define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
+define('DIR_STORAGE', '/var/www/storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/theme/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');

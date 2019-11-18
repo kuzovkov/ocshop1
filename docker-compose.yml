@@ -40,5 +40,6 @@ services:
        DB_PASSWORD: userp@ssw0rd
      volumes:
         - ./opencart:/var/www/html
+        - ./storage:/var/www/storage
 volumes:
     db-data: {}

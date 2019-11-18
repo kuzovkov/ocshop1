@@ -11,7 +11,7 @@ define('HTTPS_CATALOG', 'http://localhost:8008/');
 define('DIR_APPLICATION', '/var/www/html/admin/');
 define('DIR_SYSTEM', '/var/www/html/system/');
 define('DIR_IMAGE', '/var/www/html/image/');
-define('DIR_STORAGE', DIR_SYSTEM . 'storage/');
+define('DIR_STORAGE', '/var/www/storage/');
 define('DIR_CATALOG', '/var/www/html/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');

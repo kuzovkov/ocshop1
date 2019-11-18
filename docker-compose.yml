@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db-data:/var/lib/mysql
+       - ./db/dump:/dump
+       - ./docker/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf:ro
+     #restart: always
+     ports:
+      - "33306:3306"
+     environment:
+       MYSQL_ROOT_PASSWORD: rootp@ssw0rd
+       MYSQL_DATABASE: ocshop
+       MYSQL_USER: user1
+       MYSQL_PASSWORD: userp@ssw0rd
+   nginx:
+     image: nginx:1.11-alpine
+     #restart: always
+     depends_on:
+      - app
+     ports:
+       - "8008:80"
+     dns: 8.8.8.8
+     volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./opencart:/var/www/html
+   app:
+     depends_on:
+       - db
+     build: .
+     #restart: always
+     dns: 8.8.8.8
+     environment:
+       DB_HOST: db:3306
+       DB_USER: user1
+       DB_NAME: ocshop
+       DB_PASSWORD: userp@ssw0rd
+     volumes:
+        - ./opencart:/var/www/html
+volumes:
+    db-data: {}

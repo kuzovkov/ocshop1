@@ -20,8 +20,6 @@ http://localhost:8008/info.php
 ./get-oc.sh
 ```
 
-
-# install
 Go to 
 ```
 http://localhost:8008/

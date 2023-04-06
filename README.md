@@ -1,4 +1,4 @@
-###I. Install
+### I. Install
 
 ```bash
 git clone https://github.com/kuzovkov/oc-tpl mysite
@@ -21,7 +21,7 @@ http://localhost:8008/info.php
 ```
 
 
-#install
+# install
 Go to 
 ```
 http://localhost:8008/
@@ -36,7 +36,7 @@ Set `db` as `dbhost`
 
 ```
 
-###II. Developing
+### II. Developing
 
 ```bash
 #dump database
@@ -48,7 +48,7 @@ Set `db` as `dbhost`
 ./dbrec.sh
 ```    
 
-###III. Trobleshuting
+### III. Trobleshuting
     
 Fixing "Unknown collation: ‘utf8mb4_unicode_520_ci"
 
